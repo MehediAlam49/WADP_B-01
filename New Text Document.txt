@@ -1,0 +1,105 @@
+Django 1st class
+Create Django environment
+activate environment
+create a project
+run the project server
+
+
+
+
+
+Django 2nd class
+- dbsqlite3
+- Migrate database
+- create superuser
+- Talk about urls.py, views.py
+- Function define
+
+
+
+
+		1st class
+Make a folder and open it cmd
+1st step> python -m venv env (create env)
+2nd step> cd env
+3rd step> cd scripts
+4th step> activate (for activate env)
+
+5th step> pip install Django (for install Django)
+6th step> back to root folder> cd ../.. (for back root folder)
+7th step> django-admin startproject myProject (create project)
+8th step> cd myProject (for inside project)
+9th step>python manage.py runserver (run server for output)
+
+
+			2nd class
+1st step> python manage.py migrate (for databage migrate)
+2nd step> python manage.py createsuperuser (create super user)
+3rd step> create user and password
+4th step> create views.py file inside myProject> create a function and create a url in urls.py
+5th step> again run server and see output
+
+			3rd class
+render html file
+
+
+
+			4th Class
+template mastering
+
+working process:
+create template and static folder inside project
+Initialized static in settings
+Initialized template folder in settings
+create html file
+create function and render html file
+
+
+
+			5th class
+- Create Django Apps
+- Create and Register Models
+- Insert Data
+
+working process:
+-> Create super user
+-> Create Apps
+-> Installed Apps
+-> Create Model
+-> Register Model
+-> Migrate
+-> Open Admin & Insert Data
+-> Open DB SQLite
+
+			6th class
+- Read Data form Model
+- Display data into table
+
+working process:
+-Create project
+- Navigate and template mastering
+- Create apps
+- Create Model
+- Migrate Database
+- Navigation
+- Template mastering
+- Entry Data
+- Read and Display Data into table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

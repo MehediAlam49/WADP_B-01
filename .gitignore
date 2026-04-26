@@ -1,0 +1,23 @@
+env
+myenv
+myEnv
+__pycache__/
+.env
+
+cat <<EOF >> .gitignore
+# Environments
+env/
+myenv/
+myEnv/
+
+# Python cache
+__pycache__/
+
+# Environment variables (Sensitive data)
+.env
+
+# Large files
+*.mp4
+*.zip
+*.exe
+EOF
