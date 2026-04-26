@@ -1,0 +1,97 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Update Resume</h2>
+    <form action="{% url 'updateResume' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Resume Information</h2>
+        <div class="mb-2">
+            
+            <input type="text" class="form-control" id="resumeID" value="{{resumeData.id}}" name="resumeID" readonly>
+        </div>
+        <div class="mb-2">
+            <label for="profilePicture" class="form-label">Profile Picture</label>
+            
+            {% if resumeData.ProfilePicture %}
+                <img src="{{resumeData.ProfilePicture.url}}" width="70px" alt="">
+            {% endif %}
+            <input type="file" class="form-control" id="profilePicture" name="profilePicture">
+                
+        </div>
+        <div class="mb-2">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" value="{{resumeData.FullName}}" id="fullName" name="fullName">
+        </div>
+
+        <div class="mb-2">
+            <label for="address" class="form-label">Adress</label>
+            <input type="text" class="form-control"  value="{{resumeData.Address}}" id="address" name="address">
+        </div>
+        <div class="mb-2">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control"  value="{{resumeData.Phone}}" id="phone" name="phone">
+        </div>
+        <div class="mb-2">
+            <label for="email" class="form-label">email</label>
+            <input type="text" class="form-control" id="email"  value="{{resumeData.Email}}" name="email">
+        </div>
+        <div class="mb-2">
+            <label for="careerObjective" class="form-label">careerObjective</label>
+            <input type="text" class="form-control" id="careerObjective"  value="{{resumeData.CareerObjective}}" name="careerObjective">
+        </div>
+        <div class="mb-2">
+            <label for="skills" class="form-label">skills</label>
+            <input type="text" class="form-control"  value="{{resumeData.Skills}}" id="skills" name="skills">
+        </div>
+        <div class="mb-2">
+            <label for="certification" class="form-label">certification</label>
+            <input type="text" class="form-control" id="certification"  value="{{resumeData.Certification}}" name="certification">
+        </div>
+        <div class="mb-2">
+            <label for="projects" class="form-label">projects</label>
+            <input type="text" class="form-control" id="projects"  value="{{resumeData.Projects}}" name="projects">
+        </div>
+        <div class="mb-2">
+            <label for="references" class="form-label">references</label>
+            <input type="text" class="form-control" id="references"  value="{{resumeData.References}}" name="references">
+        </div>
+
+        <h2>Education History</h2>
+        <div class="mb-2">
+            <label for="degree" class="form-label">degree</label>
+            <input type="text" class="form-control"  value="{{educationData.Degree}}" id="degree" name="degree">
+        </div>
+        <div class="mb-2">
+            <label for="institution" class="form-label">institution</label>
+            <input type="text" class="form-control" value="{{educationData.Institution}}" id="institution" name="institution">
+        </div>
+        <div class="mb-2">
+            <label for="graduationYear" class="form-label">graduationYear</label>
+            <input type="text" class="form-control" id="graduationYear" value="{{educationData.GraduationYear}}" name="graduationYear">
+        </div>
+
+        <h2>Work Experience</h2>
+        <div class="mb-2">
+            <label for="company" class="form-label">company</label>
+            <input type="text" class="form-control" value="{{workData.Company}}" id="company" name="company">
+        </div>
+        <div class="mb-2">
+            <label for="position" class="form-label">position</label>
+            <input type="text" class="form-control" value="{{workData.Position}}" id="position" name="position">
+        </div>
+        <div class="mb-2">
+            <label for="startDate" class="form-label">startDate</label>
+            <input type="text" class="form-control"  value="{{workData.StartDate}}" id="startDate" name="startDate">
+        </div>
+        <div class="mb-2">
+            <label for="endDate" class="form-label">endDate</label>
+            <input type="text" class="form-control"  value="{{workData.endDate}}" id="endDate" name="endDate">
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">update Resume</button>
+    </form>
+</div>
+{% endblock content %}

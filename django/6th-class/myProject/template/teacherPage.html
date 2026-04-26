@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<h1>Teacher Data</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>id No.</th>
+        <th>Designation</th>
+    </tr>
+
+
+    {% for i in teacherData %}
+    <tr>
+        <td>{{i.teacherName}}</td>
+        <td>{{i.teacherid}}</td>
+        <td>{{i.teacherType}}</td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+{% endblock content %}

@@ -1,0 +1,38 @@
+- Create Django Apps
+- Create and Register Models
+- Insert Data
+
+working process:
+-> Create super user
+-> Create Apps
+-> Ipsnstalled App
+-> Create Model
+-> Register Model
+-> Migrate
+-> Open Admin & Insert Data
+-> Open DB SQLite
+
+
+
+
+
+
+
+
+
+
+
+
+- Read Data form Model
+- Display data into table
+
+working process:
+-Create project
+- Navigate and template mastering
+- Create apps
+- Create Model
+- Migrate Database
+- Navigation
+- Template mastering
+- Entry Data
+- Read and Display Data into table

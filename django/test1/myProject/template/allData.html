@@ -1,0 +1,73 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<!-- Management Table Data -->
+<h1>Management Table</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Adress</th>
+        
+    </tr>
+
+    {% for i in management %}
+    <tr>
+        <td>{{i.Name}}</td>
+        <td>{{i.Designation}}</td>
+        <td>{{i.Address}}</td>
+       
+        
+    </tr>
+    {% endfor %}
+
+</table>
+
+<!-- Teacher Table Data -->
+<h1>Teacher Table</h1>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>City</th>
+        
+    </tr>
+
+    {% for i in teacher %}
+    <tr>
+        <td>{{i.FirstName}}</td>
+        <td>{{i.LastName}}</td>
+        <td>{{i.Department}}</td>
+        <td>{{i.City}}</td>
+       
+        
+    </tr>
+    {% endfor %}
+
+</table>
+<!-- Student Table Data -->
+<h1>Student Table</h1>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>City</th>
+        
+    </tr>
+
+    {% for i in student %}
+    <tr>
+        <td>{{i.FirstName}}</td>
+        <td>{{i.LastName}}</td>
+        <td>{{i.Department}}</td>
+        <td>{{i.City}}</td>
+       
+        
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock content %}

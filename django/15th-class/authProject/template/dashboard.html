@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">User Dashboard</span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-5">
+
+        <!-- Title -->
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Welcome, {{user.first_name}}</h2>
+            <p class="text-muted">Here is your profile information</p>
+        </div>
+
+        <!-- Card -->
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card shadow-lg border-0 rounded-4">
+
+                    <!-- Card Header -->
+                    <div class="card-header bg-primary text-white text-center rounded-top-4">
+                        <h4 class="mb-0">Profile Details</h4>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+                            <strong>First Name:</strong>
+                            <span class="float-end">{{user.first_name}}</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <strong>Last Name:</strong>
+                            <span class="float-end">{{user.last_name}}</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <strong>User Type:</strong>
+                            <span class="badge bg-success float-end">{{user.UserType}}</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <strong>Email:</strong>
+                            <span class="float-end">{{user.email}}</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <strong>Education:</strong>
+                            <span class="float-end">{{user.Education}}</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <strong>Gender:</strong>
+                            <span class="float-end">{{user.Gender}}</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Card Footer -->
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary rounded-pill px-4">Edit Profile</a>
+                        <a href="{% url 'signoutPage' %}" class="btn btn-outline-danger rounded-pill px-4">Logout</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

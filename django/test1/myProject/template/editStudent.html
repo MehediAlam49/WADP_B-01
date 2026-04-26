@@ -1,0 +1,30 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<h2>Add Student</h2>
+
+
+{% for i in student %}
+    <form action="{% url 'updateStudent' %}" method="POST">
+    {% csrf_token %}
+    <label for="fname">ID</label>
+    <input type="text" id="fname" name="stuID" value="{{i.id}}" placeholder="Your name.." readonly>
+    
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" value="{{i.FirstName}}" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" value="{{i.LastName}}" placeholder="Your last name..">
+
+    <label for="department">Department</label>
+    <input type="text" id="department" name="department" value="{{i.Department}}" placeholder="Your department..">
+
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" value="{{i.City}}" placeholder="Your city..">
+
+    <input type="submit" value="Update Student">
+</form>
+{% endfor %}
+    
+{% endblock content %}

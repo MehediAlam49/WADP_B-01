@@ -1,0 +1,29 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<h1>Teacher Table</h1>
+
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>City</th>
+        
+    </tr>
+
+    {% for i in teacher %}
+    <tr>
+        <td>{{i.FirstName}}</td>
+        <td>{{i.LastName}}</td>
+        <td>{{i.Department}}</td>
+        <td>{{i.City}}</td>
+       
+        
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock content %}

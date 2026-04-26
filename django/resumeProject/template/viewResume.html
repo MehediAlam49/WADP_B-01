@@ -1,0 +1,87 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<div class="container my-5">
+
+    <!-- Header Section -->
+    <div class="card shadow-lg p-4">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center">
+                <img src="{{ resumeData.ProfilePicture.url }}"
+                     class="img-fluid rounded-circle border border-3"
+                     style="width:180px; height:180px; object-fit:cover;">
+            </div>
+            <div class="col-md-9">
+                <h2 class="fw-bold">{{ resumeData.FullName }}</h2>
+                <p class="mb-1"><i class="bi bi-telephone"></i> {{ resumeData.Phone }}</p>
+                <p class="mb-1"><i class="bi bi-envelope"></i> {{ resumeData.Email }}</p>
+                <p class="mb-0"><i class="bi bi-geo-alt"></i> {{ resumeData.Address }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Career Objective -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">Career Objective</h4>
+        <p>{{ resumeData.CareerObjective }}</p>
+    </div>
+
+    <!-- Skills -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">Skills</h4>
+        <p>{{ resumeData.Skills }}</p>
+    </div>
+
+    <!-- Certifications -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">Certifications</h4>
+        <p>{{ resumeData.Certification }}</p>
+    </div>
+
+    <!-- Projects -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">Projects</h4>
+        <p>{{ resumeData.Projects }}</p>
+    </div>
+
+    <!-- Education -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">Education</h4>
+        <div class="row">
+            <div class="col-md-4"><strong>Degree:</strong></div>
+            <div class="col-md-8">{{ educationData.Degree }}</div>
+
+            <div class="col-md-4"><strong>Institution:</strong></div>
+            <div class="col-md-8">{{ educationData.Institution }}</div>
+
+            <div class="col-md-4"><strong>Year:</strong></div>
+            <div class="col-md-8">{{ educationData.GraduationYear }}</div>
+        </div>
+    </div>
+
+    <!-- Work Experience -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">Work Experience</h4>
+        <div class="row">
+            <div class="col-md-4"><strong>Company:</strong></div>
+            <div class="col-md-8">{{ workData.Company }}</div>
+
+            <div class="col-md-4"><strong>Position:</strong></div>
+            <div class="col-md-8">{{ workData.Position }}</div>
+
+            <div class="col-md-4"><strong>Start Date:</strong></div>
+            <div class="col-md-8">{{ workData.StartDate }}</div>
+
+            <div class="col-md-4"><strong>End Date:</strong></div>
+            <div class="col-md-8">{{ workData.endDate }}</div>
+        </div>
+    </div>
+
+    <!-- References -->
+    <div class="card mt-4 shadow-sm p-4">
+        <h4 class="text-primary border-bottom pb-2">References</h4>
+        <p>{{ resumeData.References }}</p>
+    </div>
+
+</div>
+{% endblock content %}

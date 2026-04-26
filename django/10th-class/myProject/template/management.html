@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<h1>student Table</h1>
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>City</th>
+        
+    </tr>
+
+    {% for i in management %}
+    <tr>
+        <td>{{i.Name}}</td>
+        <td>{{i.Designation}}</td>
+        <td>{{i.City}}</td>
+        
+        
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock content %}

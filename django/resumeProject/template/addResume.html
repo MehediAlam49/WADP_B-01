@@ -1,0 +1,87 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+<div class="container">
+    <form action="{% url 'addResume' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Resume Information</h2>
+        <div class="mb-2">
+            <label for="profilePicture" class="form-label">Profile Picture</label>
+            <input type="file" class="form-control" id="profilePicture" name="profilePicture">
+        </div>
+        <div class="mb-2">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName">
+        </div>
+
+        <div class="mb-2">
+            <label for="address" class="form-label">Adress</label>
+            <input type="text" class="form-control" id="address" name="address">
+        </div>
+        <div class="mb-2">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone">
+        </div>
+        <div class="mb-2">
+            <label for="email" class="form-label">email</label>
+            <input type="text" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-2">
+            <label for="careerObjective" class="form-label">careerObjective</label>
+            <input type="text" class="form-control" id="careerObjective" name="careerObjective">
+        </div>
+        <div class="mb-2">
+            <label for="skills" class="form-label">skills</label>
+            <input type="text" class="form-control" id="skills" name="skills">
+        </div>
+        <div class="mb-2">
+            <label for="certification" class="form-label">certification</label>
+            <input type="text" class="form-control" id="certification" name="certification">
+        </div>
+        <div class="mb-2">
+            <label for="projects" class="form-label">projects</label>
+            <input type="text" class="form-control" id="projects" name="projects">
+        </div>
+        <div class="mb-2">
+            <label for="references" class="form-label">references</label>
+            <input type="text" class="form-control" id="references" name="references">
+        </div>
+
+        <h2>Education History</h2>
+        <div class="mb-2">
+            <label for="degree" class="form-label">degree</label>
+            <input type="text" class="form-control" id="degree" name="degree">
+        </div>
+        <div class="mb-2">
+            <label for="institution" class="form-label">institution</label>
+            <input type="text" class="form-control" id="institution" name="institution">
+        </div>
+        <div class="mb-2">
+            <label for="graduationYear" class="form-label">graduationYear</label>
+            <input type="text" class="form-control" id="graduationYear" name="graduationYear">
+        </div>
+
+        <h2>Work Experience</h2>
+        <div class="mb-2">
+            <label for="company" class="form-label">company</label>
+            <input type="text" class="form-control" id="company" name="company">
+        </div>
+        <div class="mb-2">
+            <label for="position" class="form-label">position</label>
+            <input type="text" class="form-control" id="position" name="position">
+        </div>
+        <div class="mb-2">
+            <label for="startDate" class="form-label">startDate</label>
+            <input type="text" class="form-control" id="startDate" name="startDate">
+        </div>
+        <div class="mb-2">
+            <label for="endDate" class="form-label">endDate</label>
+            <input type="text" class="form-control" id="endDate" name="endDate">
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Add Resume</button>
+    </form>
+</div>
+{% endblock content %}

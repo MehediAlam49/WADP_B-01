@@ -1,0 +1,21 @@
+{% extends 'master.html' %}
+
+
+{% block content %}
+    <h1>A Fancy Table</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>{{companyName }}</td>
+    <td>{{contact}}</td>
+    <td>{{country}}</td>
+  </tr>
+  
+</table>
+{% endblock content %}
+    
