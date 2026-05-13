@@ -1,0 +1,37 @@
+{% extends 'master.html' %}
+
+{% block content %}
+    <h1>Resume Information</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Profile picture</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for i in resumeData %}
+                <tr>
+                    <th>
+                        <img src="{{i.ProfilePicture}}" width="100px" alt="">
+                    </th>
+                    <td>{{i.FullName}}</td>
+                    <td>{{i.Address}}</td>
+                    <td>{{i.Email}}</td>
+                    <td>
+                        <a href="{% url 'deleteResume' i.id %}">Delete</a>
+                        <a href="{% url 'editResume' i.id %}">Edit</a>
+                        <a href="{% url 'viewResume' i.id %}">View</a>
+                    </td>
+                </tr>
+            {% endfor %}
+                
+            
+        </tbody>
+    </table>
+{% endblock content %}
+    
