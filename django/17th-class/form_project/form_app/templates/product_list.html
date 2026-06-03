@@ -1,0 +1,43 @@
+{% extends 'master/base.html' %}
+
+
+{% block content %}
+<a class="btn btn-primary my-3" href="{% url 'add_product' %}">Add Product</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Product qty</th>
+        <th scope="col">product description</th>
+        <th scope="col">product Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {% for data in product_data %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{data.product_name}}</td>
+        <td>{{data.product_price}}</td>
+        <td>{{data.product_qty}}</td>
+        <td>{{data.product_description}}</td>
+        <td>
+            
+            {% if data.product_img %}
+            <img src="{{data.product_img.url}}" width="50px" alt="">
+            {% else %}
+            no image
+            {% endif %}
+                
+        </td>
+        
+      </tr>
+      {% endfor %}
+        
+      
+    </tbody>
+  </table>
+{% endblock content %}
+    
