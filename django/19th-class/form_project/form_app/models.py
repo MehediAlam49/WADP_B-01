@@ -6,6 +6,7 @@ class ProductModel(models.Model):
   product_price=models.FloatField(null=True)
   product_description=models.TextField(null=True)
   product_qty=models.PositiveIntegerField(null=True)
+  total_amount=models.FloatField(null=True)
 
   PRODUCT_CATEGORY=[
     ('Electric','Electric'),

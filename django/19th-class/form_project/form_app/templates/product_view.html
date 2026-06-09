@@ -1,0 +1,17 @@
+{% extends 'master/base.html' %}
+
+{% block content %}
+  <div class="card mx-auto mt-4" style="width: 18rem;">
+    {% if product_data.product_img %}
+      <img src="{{ product_data.product_img.url }}" class="card-img-top" alt="..." />
+    {% else %}
+      No Image
+    {% endif %}
+
+    <div class="card-body">
+      <h5 class="card-title">{{ product_data.product_name }}</h5>
+      <p class="card-text">{{ product_data.product_description }}</p>
+      <a href="#" class="btn btn-primary">{{ product_data.product_price }}</a>
+    </div>
+  </div>
+{% endblock %}

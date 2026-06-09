@@ -5,4 +5,5 @@ class productForm(forms.ModelForm):
     class Meta:
         model=ProductModel
         fields='__all__'
+        exclude=['total_amount']
         
