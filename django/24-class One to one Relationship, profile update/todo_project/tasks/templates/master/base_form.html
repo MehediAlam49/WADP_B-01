@@ -1,0 +1,11 @@
+{% extends 'master/base.html' %}
+
+{% block content %}
+<h1>{{title_form}}</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form_data}}
+    <button type="submit" class="btn btn-primary">{{submit_btn}}</button>
+  </form>
+{% endblock content %}
+    

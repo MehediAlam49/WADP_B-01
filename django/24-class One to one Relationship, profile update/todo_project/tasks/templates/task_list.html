@@ -1,0 +1,46 @@
+{% extends 'master/base.html' %}
+
+
+{% block content %}
+<a class="btn btn-primary" href="{% url 'add_task' %}">Add Task</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
+        <th scope="col">Due Date</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
+        <th scope="col">Created by</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {% for data in task_data %}
+      <tr>
+        <td scope="row">{{forloop.counter}}</td>
+        <td scope="row">{{data.title}}</td>
+        <td scope="row">{{data.description}}</td>
+        <td scope="row">{{data.status}}</td>
+        <td scope="row">{{data.due_date}}</td>
+        <td scope="row">{{data.created_at}}</td>
+        <td scope="row">{{data.updated_at}}</td>
+        <td scope="row">{{data.created_by}}</td>
+        <td>
+          <a class="badge bg-primary" href="{% url 'edit_task' data.id %}">Edit</a>
+          <a class="badge bg-primary" href="{% url 'view_task' data.id %}">View</a>
+          <a class="badge bg-primary" href="{% url 'delete_task' data.id %}">Delete</a>
+        </td>
+        
+        
+      </tr>
+      {% endfor %}
+        
+      
+    </tbody>
+  </table>
+{% endblock content %}
+    
